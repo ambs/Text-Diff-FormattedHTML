@@ -192,10 +192,10 @@ sub _internal_diff {
                 $out .= sprintf("<tr class='%s'><td>%s</td><td>%s</td><td>%s</td></tr>\n",
                                 $class, $ln, $rn, $l);
             } else {
-                $l && $out .= sprintf("<tr class='%s'><td>%s</td><td></td><td>%s</td></tr>\n",
-                                      $class, $ln, $l);
-                $r && $out .= sprintf("<tr class='%s'><td></td><td>%s</td><td>%s</td></tr>\n",
-                                      $class, $rn, $r);
+                $l and $out .= sprintf("<tr class='%s'><td>%s</td><td></td><td>%s</td></tr>\n",
+                                       $class, $ln, $l);
+                $r and $out .= sprintf("<tr class='%s'><td></td><td>%s</td><td>%s</td></tr>\n",
+                                       $class, $rn, $r);
             }
             $out
         }
