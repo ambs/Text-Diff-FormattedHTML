@@ -1,5 +1,11 @@
 Revision history for Text-Diff-FormattedHTML
 
+0.02    Sat Jul 23 18:44:08 WEST 2011
+        - support vertical mode      
+        - better CSS support by row type;
+        - use that CSS support for changed lines;
+        - make background green/red more noticiing;
+
 0.01    Sat Jul 23 16:25:50 WEST 2011
         First version, released on an unsuspecting world.
         - basic functionality. patches welcome.
