@@ -1,0 +1,8 @@
+<foo>
+  some text
+  <b>some bold</b>
+ Some other text
+  <i>some other makup</i>
+  And more text  
+  And to end
+</foo>
