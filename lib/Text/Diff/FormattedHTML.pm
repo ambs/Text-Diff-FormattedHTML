@@ -18,11 +18,11 @@ Text::Diff::FormattedHTML - Generate a colorful HTML diff of strings/files.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -124,12 +124,20 @@ table.diff td:nth-child(2) {
    background-color: #deedff;
 }
 
-
 table.diff tr.change,
 table.diff tr.disc_a,
 table.diff tr.disc_b {
    background-color: #ffffdd;
 }
+
+table.diff tr.del {
+  background-color: #ffeeee;
+}
+
+table.diff tr.ins {
+  background-color: #eeffee;
+}
+
 
 table.diff td:nth-child(3),
 table.diff td:nth-child(4) {
@@ -192,8 +200,10 @@ sub _internal_diff {
                 $out .= sprintf("<tr class='%s'><td>%s</td><td>%s</td><td>%s</td></tr>\n",
                                 $class, $ln, $rn, $l);
             } else {
+                $class eq "change" && ($class = "change del");
                 $l and $out .= sprintf("<tr class='%s'><td>%s</td><td></td><td>%s</td></tr>\n",
                                        $class, $ln, $l);
+                $class eq "change del" && ($class = "change ins");
                 $r and $out .= sprintf("<tr class='%s'><td></td><td>%s</td><td>%s</td></tr>\n",
                                        $class, $rn, $r);
             }

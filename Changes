@@ -1,5 +1,8 @@
 Revision history for Text-Diff-FormattedHTML
 
+0.04    Fri Aug 26 21:05:20 WEST 2011
+        - support different colors in vertical mode for "before" and "after";
+
 0.03    Thu Jul 28 15:08:34 WEST 2011
         - removing -T from 00_load :-/
 
