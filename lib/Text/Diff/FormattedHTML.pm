@@ -18,11 +18,11 @@ Text::Diff::FormattedHTML - Generate a colorful HTML diff of strings/files.
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 
 =head1 SYNOPSIS
@@ -197,8 +197,8 @@ sub _internal_diff {
             my $out = "";
             my ($class, $ln, $rn, $l, $r) = @_;
             if ($l eq $r) {
-                $class eq "disc_a" && ($class = "disc_a del";
-                $class eq "disc_b" && ($class = "disc_b ins";
+                $class eq "disc_a" && ($class = "disc_a del");
+                $class eq "disc_b" && ($class = "disc_b ins");
                 $out .= sprintf("<tr class='%s'><td>%s</td><td>%s</td><td>%s</td></tr>\n",
                                 $class, $ln, $rn, $l);
             } else {
