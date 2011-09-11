@@ -1,5 +1,8 @@
 Revision history for Text-Diff-FormattedHTML
 
+0.07    Sun Sep 11 14:14:30 WEST 2011
+        - fix 0.05 change, that tried to fix 0.04 change. Great!
+
 0.06    Sun Sep 11 13:27:30 WEST 2011
         - It was dark, I was tired, and forgot to run 'make test'
 
